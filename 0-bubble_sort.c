@@ -10,11 +10,14 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	int i = 0;
-	int j = 0;
+	size_t i = 0;
+	size_t j = 0;
 	int temp;
 
-	for (i; i < size - 1; i++)
+	if (array == NULL || size < 2)
+		return (NULL);
+
+	for (i = 0; i < size - 1; i++)
 	{
 		for (j = 0; j < size - i - 1; j++)
 		{
